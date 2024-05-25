@@ -58,7 +58,13 @@ public class MovingSphere : MonoBehaviour {
             Jump();
         }
         body.velocity = velocity;
+        ClearState();
+    }
+
+    void ClearState()
+    {
         onGround = false;
+        contactNormal = Vector3.zero;
     }
 
     void UpdateState()
